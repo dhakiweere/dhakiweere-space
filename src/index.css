@@ -1,0 +1,6 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-dark-main: rgb(15, 14, 18)
+}
+
