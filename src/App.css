@@ -1,14 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single:wght@100..900&family=Inconsolata:wght@200..900&display=swap');
 @import 'tailwindcss';
 
-* {
-  @apply text-lime-300;
+@theme {
+  --color-dark-main: rgb(15, 14, 18);
+  --font-bitcount: "Bitcount Grid Single";
+  --font-inconsolata: "Inconsolata";
 }
 
-.animate-border {
-  @apply border-solid border-transparent border-s-20 border-t-2 duration-300 hover:border-lime-300 
+@layer base {
+  * {
+    @apply text-lime-300;
+  }
 }
 
-.clickable-icon {
+@layer utilities {
+  .container-top {
+    @apply text-lime-300 bg-linear-to-br from-dark-main from-20% to-purple-500
+  }
+
+  .animate-border {
+    @apply border-solid border-transparent border-s-10 xl:border-s-20 border-t-2 duration-500
+  }
+
+  .animate-border:hover {
+    @apply border-lime-300 ps-9 from-dark-main to-75% to-transparent
+  }
+
+  .clickable-icon {
     @apply duration-150 hover:cursor-pointer hover:scale-110
-    
+  }
+
+  .socials {
+    @apply bg-linear-90 from-lime-300 from-10% to-transparent
+  }
+
+  .animate-button-online {
+    @apply font-bitcount border-dotted border-2 border-lime-500 p-1 rounded-sm duration-150
+  }
+
+  .animate-button-repo {
+    @apply font-bitcount border-dotted border-2 border-orange-500 text-orange-500 p-1 rounded-sm duration-150
+  }
+
+  .animate-button-online:hover {
+    @apply scale-110 bg-green-500 text-white;
+  }
+
+  .animate-button-repo:hover {
+    @apply scale-110 bg-orange-500 text-white;
+  }
 }
