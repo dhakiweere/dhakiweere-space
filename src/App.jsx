@@ -26,11 +26,11 @@ export default function () {
 
 
   return (
-    <div className='container-top w-full h-screen flex flex-col justify-center items-center'>
+    <div className='container-top w-full h-[200vh] flex flex-col justify-center items-center'>
 
       {/* Container actual */}
       <div className="container-actual bg-transparent w-full max-w-6xl h-full 
-          flex flex-col justify-baseline items-start gap-y-10 xl:gap-y-20"
+          flex flex-col items-start gap-y-10 xl:gap-y-20"
       >
 
         {/* HEADER */}
@@ -40,7 +40,7 @@ export default function () {
           <img className='logo h-8' src={logo} />
           <div className='flex-1'></div>
           <p className='flex items-center font-bitcount'>About</p>
-           
+
         </div>
         {/* HEADER */}
 
@@ -49,7 +49,7 @@ export default function () {
           <p className='min-h-12 md:h-20 text-5xl bold md:text-7xl w-[10ch] md:w-full font-sans'>{title}</p>
           <div className='socials w-fit h-[70px] flex gap-x-3 
             py-3 ps-3 pe-5 rounded-tl-3xl rounded-bl-3xl  '
-            >
+          >
             <a className='aspect-square' href='https://github.com/dhakiweere'><img className="clickable-icon h-full" src={gh_logo} /></a>
             <a className='aspect-square' href='https://linkedin.com/in/dhanikaweerasekara'><img className="clickable-icon h-full" src={lnk_logo} /></a>
           </div>
@@ -62,8 +62,10 @@ export default function () {
           <ol className='text-xl font-inconsolata'>
             {/* reflex ci/cd */}
             <li >
-              <div className='animate-selection mb-3 flex flex-row gap-x-2 items-center'>
-                <p className="font-bold" >Reflex Ci/Cd</p>
+              <div className='animate-selection mb-3 flex flex-row gap-x-2 items-center justify-baseline'>
+                <p className="font-bold w-[15ch]">Reflex Ci/Cd</p>
+                <div className='hidden md:block w-40'></div>
+                <p className='hidden xl:block italic text-left'>Self reacting duplex Ci/CD Pipeline</p>
                 <div className='flex-1'></div>
                 <a href='http://reflex.dhakiweere.space' className='animate-button-online'>Online</a>
                 <a href='https://github.com/dhakiweere/reflex-ci-cd' className='animate-button-repo'>Repo</a>
@@ -72,8 +74,10 @@ export default function () {
 
             {/* other one */}
             <li>
-              <div className='animate-selection flex flex-row items-center'>
-                <p className="font-bold" >Thock Simulator</p>
+              <div className='animate-selection mb-3 flex flex-row gap-x-2 items-center justify-baseline'>
+                <p className="font-bold w-[15ch]" >Thock Simulator</p>
+                <div className='hidden md:block w-40'></div>
+                <p className='hidden xl:block italic text-left'>Mechanical key input sound on Console</p>
                 <div className='flex-1'></div>
                 <a href='http://reflex.dhakiweere.space' className='animate-button-repo'>Repo</a>
               </div>

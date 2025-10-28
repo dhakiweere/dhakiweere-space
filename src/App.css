@@ -11,6 +11,26 @@
   * {
     @apply text-lime-300;
   }
+
+  /* width */
+  ::-webkit-scrollbar {
+    width: 7px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    @apply bg-dark-main}
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    @apply bg-purple-500
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-black 
+
+  }
 }
 
 @layer utilities {
