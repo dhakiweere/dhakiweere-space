@@ -39,9 +39,9 @@ export default function () {
          border-b-2 border-s-10 xl:border-s-20 ps-5 p-2'>
           <a href='https://dhakiweere.space'><img className='logo h-8' src={logo} /></a>
           <div className='flex-1'></div>
-          <button className='flex items-center font-bitcount 
-          hover:scale-110 hover:cursor-pointer hover:underline
-          ' onClick={() => {
+          <a href="/resume.pdf" className='header-link'>Resume</a>
+          <button className='header-link'
+            onClick={() => {
               document.getElementById('about').scrollIntoView({
                 behavior: 'smooth',
                 block: 'start'
@@ -113,11 +113,9 @@ export default function () {
         <div id='about' className='animate-border h-fit w-full flex flex-col gap-y-3 p-3'>
           <p className='w-fit text-4xl xl:text-5xl mb-3 font-bitcount border-dotted border-b-2'>About</p>
           <p className='w-[35ch] md:w-[70ch] lg:w-[100ch] font-inconsolata italic text-xl '>
-            I am a final-year undergraduate student at the Java Institute of Advanced Technology,
-            pursuing a degree in information technology. <br /><br /> I have a strong passion for cryptography, DevOps, and
+            I am a final-year undergraduate student at the Java Institute of Advanced Technology - Sri Lanka,
+            pursuing Bachelor's in software engineering. <br /><br /> I have a strong passion for cryptography, DevOps, and
             cloud computing, with a particular interest in building secure, scalable, and automated systems.
-            <br /><br />I aim to become a skilled Cloud/DevOps Engineer, contributing to innovative and reliable infrastructure solutions.
-            Outside of my academic and technical pursuits, I enjoy swimming and open skies.
           </p>
         </div>
         {/* ABOUT*/}
@@ -129,8 +127,9 @@ export default function () {
           <div className='bg-linear-to-b from-dark-main from-40% to-transparent rounded-t-xl
            font-inconsolata text-sm text-center p-2 font-bold
            flex flex-col md:flex-row'>
-            <p>&copy; 2025 Dhanika Weerasekara &nbsp;</p>
-            <p>All rights reserved</p>
+            <p> &copy; 2025 Dhanika Weerasekara&nbsp;</p>
+            <p> All rights reserved&nbsp;</p>
+            <a className="hover:scale-110" href="https://github.com/dhakiweere/dhakiweere-space">| Project Repo |</a>
           </div>
         </footer>
         {/* FOOTER */}

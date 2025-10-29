@@ -9,12 +9,13 @@
 
 @layer base {
   * {
-    @apply text-lime-300;
+    @apply text-lime-300 duration-200;
   }
 
 }
 
 @layer utilities {
+
   /* scroll hide - Chrome | Safari | Opera */
   .no-scrollbar::-webkit-scrollbar {
     display: none;
@@ -22,8 +23,10 @@
 
   /* scroll hide - IE | Edge | Firefox */
   .no-scrollbar {
-    -ms-overflow-style: none;  /* IE | Edge */
-    scrollbar-width: none;     /* Firefox */
+    -ms-overflow-style: none;
+    /* IE | Edge */
+    scrollbar-width: none;
+    /* Firefox */
   }
 
   .container-top {
@@ -68,5 +71,9 @@
 
   .animate-button-demo:hover {
     @apply scale-110 bg-cyan-400 text-white cursor-pointer;
+  }
+
+  .header-link {
+    @apply flex items-center font-bitcount hover:scale-110 hover:cursor-pointer hover:underline
   }
 }
