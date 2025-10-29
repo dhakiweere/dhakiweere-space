@@ -39,7 +39,7 @@
   }
 
   .container-top {
-    @apply text-lime-300 bg-linear-to-br from-dark-main from-20% to-purple-500
+    @apply text-lime-300 bg-linear-to-br from-dark-main from-20% to-purple-600
   }
 
   .animate-border {

@@ -37,7 +37,7 @@ export default function () {
          flex flex-row gap-x-2 
          sticky top-0
          border-b-2 border-s-10 xl:border-s-20 ps-5 p-2'>
-          <img className='logo h-8' src={logo} />
+          <a href='https://dhakiweere.space'><img className='logo h-8' src={logo} /></a>
           <div className='flex-1'></div>
           <button className='flex items-center font-bitcount 
           hover:scale-110 hover:cursor-pointer hover:underline
