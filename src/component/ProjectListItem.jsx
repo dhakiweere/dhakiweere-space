@@ -5,9 +5,9 @@ export default function ProjectListItem({title, desc, repoURL=null, onlineURL=nu
             <div className='hidden md:block w-40'></div>
             <p className='hidden xl:block w-[50ch] italic text-left'>{desc}</p>
             <div className='flex-1'></div>
-            {demoURL && <a href={onlineURL} className='animate-button-demo'>Demo</a>}
+            {demoURL && <a href={demoURL} className='animate-button-demo'>Demo</a>}
             {onlineURL && <a href={onlineURL} className='animate-button-online'>Online</a>}
-            {repoURL && <a href={onlineURL} className='animate-button-repo'>Repo</a>}
+            {repoURL && <a href={repoURL} className='animate-button-repo'>Repo</a>}
         </div>
     );
 }

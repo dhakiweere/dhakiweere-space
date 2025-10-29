@@ -1,6 +1,4 @@
 import { useEffect, useRef, useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import logo from './assets/logo.png'
 import gh_logo from './assets/github_logo.png'
@@ -39,13 +37,18 @@ export default function () {
          flex flex-row gap-x-2 
          sticky top-0
          border-b-2 border-s-10 xl:border-s-20 ps-5 p-2'>
-          <img className='logo h-8' src={logo} />
+          <a href='https://dhakiweere.space'><img className='logo h-8' src={logo} /></a>
           <div className='flex-1'></div>
-          <a  href='#about' className='flex items-center font-bitcount 
+          <button className='flex items-center font-bitcount 
           hover:scale-110 hover:cursor-pointer hover:underline
-          '>
+          ' onClick={() => {
+              document.getElementById('about').scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+              });
+            }}>
             About
-          </a>
+          </button>
 
         </div>
         {/* HEADER */}
@@ -132,7 +135,7 @@ export default function () {
         </footer>
         {/* FOOTER */}
       </div>
-    </div>
+    </div >
   )
 
   function _setUtilContext() {
