@@ -12,34 +12,22 @@
     @apply text-lime-300;
   }
 
-  /* width */
-  ::-webkit-scrollbar {
-    @apply hidden
-  }
-
-  /* Track */
-  ::-webkit-scrollbar-track {
-    @apply bg-dark-main}
-
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    @apply bg-purple-500
-  }
-
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    @apply bg-black 
-
-  }
 }
 
 @layer utilities {
-  ::-webkit-scrollbar{
+  /* scroll hide - Chrome | Safari | Opera */
+  .no-scrollbar::-webkit-scrollbar {
     display: none;
   }
 
+  /* scroll hide - IE | Edge | Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none;  /* IE | Edge */
+    scrollbar-width: none;     /* Firefox */
+  }
+
   .container-top {
-    @apply text-lime-300 bg-linear-to-br from-dark-main from-20% to-purple-600
+    @apply text-lime-300 bg-linear-to-br from-dark-main from-40% to-[#0f9b0f]
   }
 
   .animate-border {
@@ -65,8 +53,8 @@
   .animate-button-repo {
     @apply font-bitcount border-dotted border-2 border-orange-500 text-orange-500 p-1 rounded-sm duration-150
   }
-  
-  .animate-button-demo{
+
+  .animate-button-demo {
     @apply font-bitcount border-dotted border-2 border-cyan-400 text-cyan-400 p-1 rounded-sm duration-150
   }
 

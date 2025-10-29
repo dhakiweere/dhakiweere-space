@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import './App.css'
 import logo from './assets/logo.png'
 import gh_logo from './assets/github_logo.png'
-import lnk_logo from './assets/linkedin_logo2.png'
+import lnk_logo from './assets/linkedin_logo.png'
 import { context, titleChangeJob } from './utils/titleAnimate'
 import ProjectListItem from './component/ProjectListItem'
 
@@ -25,7 +25,7 @@ export default function () {
 
 
   return (
-    <div className='container-top scroll-smooth w-full h-screen overflow-y-scroll flex flex-row justify-center items-start'>
+    <div className='container-top no-scrollbar scroll-smooth w-full h-screen overflow-y-scroll flex flex-row justify-center items-start'>
 
       {/* Container actual */}
       <div className="container-actual bg-transparent w-full max-w-6xl h-fit 
@@ -112,7 +112,7 @@ export default function () {
         {/* ABOUT*/}
         <div id='about' className='animate-border h-fit w-full flex flex-col gap-y-3 p-3'>
           <p className='w-fit text-4xl xl:text-5xl mb-3 font-bitcount border-dotted border-b-2'>About</p>
-          <p className='w-[35ch] xl:w-[100ch] font-inconsolata italic text-xl '>
+          <p className='w-[35ch] md:w-[70ch] lg:w-[100ch] font-inconsolata italic text-xl '>
             I am a final-year undergraduate student at the Java Institute of Advanced Technology,
             pursuing a degree in information technology. <br /><br /> I have a strong passion for cryptography, DevOps, and
             cloud computing, with a particular interest in building secure, scalable, and automated systems.
