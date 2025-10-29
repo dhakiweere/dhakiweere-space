@@ -18,7 +18,8 @@ jobs:
     if: |
       startsWith(github.event.head_commit.message, 'stable v') ||
       startsWith(github.event.head_commit.message, 'Stable v') ||
-      startsWith(github.event.head_commit.message, 'STABLE v')
+      startsWith(github.event.head_commit.message, 'STABLE v') ||
+      startsWith(github.event.head_commit.message, 'resume')
     
 
     steps:
