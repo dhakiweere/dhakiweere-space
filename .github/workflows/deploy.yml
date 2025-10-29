@@ -1,41 +1,45 @@
 name: Deploy to Github Pages
 
 on:
-    workflow_dispatch:
+  workflow_dispatch:
 
-    push:
-        branches: 
-            - main
-
+  push:
+    branches:
+      - main
 
 permissions:
-    contents: read
-    pages: write
-    id-token: write
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
-    build-and-deploy:
-        runs-on: ubuntu-latest
-        steps:
-            - name: Checkout repository
-              uses: actions/checkout@v4   
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    if: |
+      startsWith(github.event.head_commit.message, 'stable v') ||
+      startsWith(github.event.head_commit.message, 'Stable v') ||
+      startsWith(github.event.head_commit.message, 'STABLE v')
+    
 
-            - name: Setup Node.js
-              uses: actions/setup-node@v4
-              with:
-                node-version: 20
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-            - name: Install dependencies
-              run: npm ci
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
 
-            - name: Build project
-              run: npm run build
+      - name: Install dependencies
+        run: npm ci
 
-            - name: Upload artifact
-              uses: actions/upload-pages-artifact@v3
-              with:
-                path: ./dist
+      - name: Build project
+        run: npm run build
 
-            - name: Deploy to GitHub Pages
-              uses: actions/deploy-pages@v4
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist
 
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
