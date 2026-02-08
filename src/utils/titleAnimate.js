@@ -1,3 +1,5 @@
+import general_data from '../../data/general_data.json'
+
 export const context = {
     title: null,
     setTitle: null,
@@ -6,7 +8,7 @@ export const context = {
 };
 
 // data var
-var titleList = ["Dhanika Weerasekara", "@dhakiweere", "dhakiweere.space"];
+var titleList = general_data.title_list;
 var loopInterval = 100;
 var loopPauseInterval = 2000;
 
@@ -47,7 +49,7 @@ export function titleChangeJob() {
         } else {
             // Reached the start, start adding again
             setIsExpanding(true);
-            if (currentTitle < 2) {
+            if (currentTitle < titleList.length-1) {
                 currentTitle++;
             } else {
                 currentTitle = 0;
