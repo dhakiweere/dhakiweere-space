@@ -89,7 +89,7 @@ export default function () {
             <li>
               <ProjectListItem
                 title="Master Observer"
-                desc="File System Monitor with Real-Time Change flasdkjfasdlkfjsfhaskdhfsdfkjs Detection"
+                desc="File System Monitor with Real-Time Change Detection"
                 repoURL="https://github.com/dhakiweere/master-observer"
               />
             </li>
