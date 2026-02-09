@@ -5,12 +5,11 @@ import gh_logo from './assets/github_logo.png'
 import lnk_logo from './assets/linkedin_logo.png'
 import { context, titleChangeJob } from './utils/titleAnimate'
 import ProjectListItem from './component/ProjectListItem'
-import general_data from '@data/general_data.json'
 
 // DEBUG
 // import './debug.css'
 
-export default function () {
+export default function ({page_data}) {
   const [title, setTitle] = useState('');
   const [isExpanding, setIsExpanding] = useState(true);
 
@@ -34,7 +33,7 @@ export default function () {
         <div className='bg-linear-to-r from-dark-main font-mono to-transparent max-h-[20vh] w-full flex flex-row gap-x-2 sticky top-0 border-b-2 border-s-10 xl:border-s-20 ps-5 p-2'>
           <a href='https://dhakiweere.space'><img className='logo h-8' src={logo} /></a>
           <div className='flex-1'></div>
-          <a href={general_data.resume_url} className='header-link'>Resume</a>
+          <a href={page_data.resume_url} className='header-link'>Resume</a>
           <button className='header-link'
             onClick={() => {
               document.getElementById('about').scrollIntoView({
@@ -54,8 +53,8 @@ export default function () {
           <div className='socials w-fit h-[70px] flex gap-x-3 
             py-3 ps-3 pe-5 rounded-tl-3xl rounded-bl-3xl  '
           >
-            <a className='aspect-square' href={general_data.github_url}><img className="clickable-icon h-full" src={gh_logo} /></a>
-            <a className='aspect-square' href={general_data.linkedin_url}><img className="clickable-icon h-full" src={lnk_logo} /></a>
+            <a className='aspect-square' href={page_data.github_url}><img className="clickable-icon h-full" src={gh_logo} /></a>
+            <a className='aspect-square' href={page_data.linkedin_url}><img className="clickable-icon h-full" src={lnk_logo} /></a>
           </div>
         </div>
         {/* TITLE */}
@@ -111,7 +110,7 @@ export default function () {
         <div id='about' className='animate-border h-fit w-full flex flex-col gap-y-3 p-3'>
           <p className='w-fit text-4xl xl:text-5xl mb-3 font-bitcount border-dotted border-b-2'>About</p>
           <p className='w-[35ch] md:w-[70ch] lg:w-[100ch] font-inconsolata italic text-xl '>
-            {general_data.about}
+            {page_data.about}
           </p>
         </div>
         {/* ABOUT*/}
@@ -125,7 +124,7 @@ export default function () {
            flex flex-col md:flex-row'>
             <p> &copy; 2025 Dhanika Weerasekara&nbsp;</p>
             <p> All rights reserved&nbsp;</p>
-            <a className="hover:scale-110" href={general_data.portfolio_repo}>| Project Repo |</a>
+            <a className="hover:scale-110" href={page_data.portfolio_repo}>| Project Repo |</a>
           </div>
         </footer>
         {/* FOOTER */}
